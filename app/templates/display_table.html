@@ -1,0 +1,16 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<title>Customers</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style2.css') }}">
+<div class=page>
+  <h1> Customers</h1>
+
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+		{{ table|safe }}
+  {% endfor %}
+
+</div>
+{% endblock %}
+

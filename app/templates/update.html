@@ -1,0 +1,27 @@
+
+{% extends "navbar.html" %}
+{% block content %}
+<body>
+    <div class="container">
+      <h1>Update Customer</h1>
+      <br>
+      <p> Last Called</p>
+      <form action="" method="post">
+        <input type="text" placeholder="Bar Name" name="barname" value="{{
+          request.form.barname }}">
+        <input type="text" placeholder="yyyy-mm-dd" name="dated" value="{{
+          request.form.date }}">
+        <input class="btn btn-default" type="submit" name = "btn" value="Update Last Called">
+      </form>
+      <p> Last Visited</p>
+      <form action="" method="post">
+        <input type="text" placeholder="Bar Name" name="barname2" value="{{
+          request.form.barname2 }}">
+        <input class="btn btn-default" type="submit" name = "btn" value="Update Last Visited">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+{% endblock %}

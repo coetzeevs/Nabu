@@ -1,0 +1,13 @@
+{% extends "navbar.html" %}
+{% block content %}
+<title>SCV</title>
+<h1>Profile:	 {{ y.iat[0,2] }}</h1>
+<p> Id:	{{ y.iat[0,0] }} </p>
+<p> Province:	{{ y.iat[0,8] }} </p>
+<p> City:	{{ y.iat[0,1] }} </p>
+<p> Contact Person:	{{ y.iat[0,5] }} </p>
+<p> Contact Email:	{{ y.iat[0,3] }} </p>
+<p> Contact Number:	{{ y.iat[0,4] }} </p>
+<p> Last Visited:	{{ y.iat[0,6] }} </p>
+<p> Last Called:	{{ y.iat[0,7] }} </p>
+{% endblock %}

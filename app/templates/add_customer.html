@@ -1,0 +1,34 @@
+{% extends "navbar.html" %}
+{% block content %}
+<html>
+  <head>
+    <title>Brannas - Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add Customer</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Province" name="province" value="{{
+          request.form.province }}">
+         <input type="text" placeholder="Area" name="area" value="{{
+          request.form.area }}">
+        <input type="text" placeholder="Bar Name" name="bar" value="{{
+          request.form.bar }}">
+          <input type="text" placeholder="Contact Person" name="person" value="{{
+          request.form.person }}">
+          <input type="text" placeholder="Contact Number" name="number" value="{{
+          request.form.number }}">
+          <input type="text" placeholder="Contact Email" name="email" value="{{
+          request.form.email }}">
+        <input class="btn btn-default" type="submit" value="Add">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
+{% endblock %}
